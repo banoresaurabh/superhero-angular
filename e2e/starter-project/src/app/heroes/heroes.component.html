@@ -1,0 +1,16 @@
+<div class="row">
+<div class="card" style="width: 18rem;" *ngFor="let hero of heroes">
+    <img class="card-img-top" [src]="hero.image" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title"><b>{{hero.name}}</b></h5>
+        <kbd>Publisher:</kbd> <span> {{hero.publisher}}</span><br/>
+        <kbd>Height:</kbd> <span> {{hero.height}}</span><br/>
+        <kbd>Weight:</kbd> <span> {{hero.weight}}</span>
+        <br/><br/>
+        <div class="row" style="margin: auto 0;">
+        <a href="#" class="btn btn-primary">Update</a>
+        &nbsp; &nbsp;<a href="#" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>
+</div>
