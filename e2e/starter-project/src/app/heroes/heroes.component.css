@@ -3,3 +3,11 @@
     height: 30vh;
     object-fit: cover;
 }
+
+.card{
+    margin-bottom: 2 em;
+}
+
+#layer{
+    background-color: rgba(0, 0, 0, 0.5);
+}

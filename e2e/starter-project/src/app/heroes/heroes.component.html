@@ -1,16 +1,42 @@
-<div class="row">
-<div class="card" style="width: 18rem;" *ngFor="let hero of heroes">
-    <img class="card-img-top" [src]="hero.image" alt="Card image cap">
+<div class="container" style="margin-top:2em;">
+
+<div class="row " style="margin: auto 0;">
+  <div class="card col-md-4" style="width: 18rem;" *ngFor="let hero of heroes">
+    <div class="card-image-div"><img class="card-img-top" [src]="hero.image" alt="Card image cap"><span id="layer">{{hero.name}}</span></div>
     <div class="card-body">
         <h5 class="card-title"><b>{{hero.name}}</b></h5>
         <kbd>Publisher:</kbd> <span> {{hero.publisher}}</span><br/>
-        <kbd>Height:</kbd> <span> {{hero.height}}</span><br/>
-        <kbd>Weight:</kbd> <span> {{hero.weight}}</span>
+        <kbd>Intellegence:</kbd> <span> {{hero.intellegence}}</span><br/>
+        <kbd>Strength:</kbd> <span> {{hero.strength}}</span>
         <br/><br/>
         <div class="row" style="margin: auto 0;">
-        <a href="#" class="btn btn-primary">Update</a>
-        &nbsp; &nbsp;<a href="#" class="btn btn-danger">Delete</a>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Update</button>
+        &nbsp; &nbsp;<button href="#" (click)="delete(hero)" class="btn btn-danger">Delete</button>
         </div>
     </div>
 </div>
 </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+</div>
+
+
